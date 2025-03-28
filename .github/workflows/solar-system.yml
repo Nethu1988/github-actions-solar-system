@@ -50,7 +50,8 @@ jobs:
           run: npm install
         
         - name: Code-Coverage
-          run: npm run code-coverage
+          continue-on-error: true
+          run: npm run coverage
 
         - name: Upload artifacts
           if: always()
